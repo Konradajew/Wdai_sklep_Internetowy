@@ -1,0 +1,145 @@
+/* Amazon-like color scheme */
+:root {
+    --amazon-yellow: #febd69;
+    --amazon-dark-blue: #232f3e;
+    --amazon-light-blue: #37475a;
+    --amazon-gray: #f3f3f3;
+    --amazon-dark-gray: #cccccc;
+    --text-color: #111;
+  }
+  
+  /* General styles */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: var(--amazon-gray);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 70px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--amazon-light-blue);
+  }
+  
+  a:hover {
+    color: var(--amazon-yellow);
+  }
+  
+  /* Header styles */
+  header {
+    background-color: var(--amazon-dark-blue);
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--amazon-yellow);
+  }
+  
+  header nav a {
+    margin: 0 15px;
+    color: white;
+    font-size: 14px;
+  }
+  
+  header nav a:hover {
+    color: var(--amazon-yellow);
+  }
+  
+  /* Search bar styles */
+  .search-bar {
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+  }
+  
+  .search-bar input[type="text"] {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid var(--amazon-dark-gray);
+    border-radius: 5px 0 0 5px;
+    flex: 1;
+  }
+  
+  .search-bar button {
+    background-color: var(--amazon-yellow);
+    border: 1px solid var(--amazon-dark-gray);
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+  }
+  
+  .search-bar button:hover {
+    background-color: var(--amazon-light-blue);
+    color: white;
+  }
+  
+  /* Product list styles */
+  .product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .product-card {
+    background-color: white;
+    border: 1px solid var(--amazon-dark-gray);
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .product-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .product-card h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .product-card p {
+    font-size: 14px;
+    color: var(--text-color);
+  }
+  
+  .product-card .price {
+    font-size: 18px;
+    color: var(--amazon-yellow);
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .product-card button {
+    background-color: var(--amazon-yellow);
+    color: var(--text-color);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .product-card button:hover {
+    background-color: var(--amazon-light-blue);
+    color: white;
+  }
+  
