@@ -12,7 +12,7 @@ Projekt z Wprowadzenia do Aplikacji Internetowych polegający na utworzeniu skle
     - [Koszyk](#koszyk)
     - [Logowanie i Rejestracja](#logowanie-i-rejestracja)
 6. [Stylizacja](#stylizacja)
-7. [Dalsze Rozwój](#dalsze-rozwoj)
+7. [Dalszy Rozwój](#dalszy-rozwoj)
 
 ---
 
