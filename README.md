@@ -71,7 +71,7 @@ root
 
 - **React**: Framework do budowania interfejsu użytkownika.
 - **TypeScript**: Typowany język programowania.
-- **React Router**: Nawigacja w aplikacji jednostronicowej (SPA).
+- **React Router**: Nawigacja w aplikacji.
 - **CSS**: Stylizacja interfejsu.
 
 ---
@@ -106,7 +106,7 @@ const ProductCard: React.FC<ProductProps> = ({ id, title, image, price, descript
 
 ### Koszyk
 
-Koszyk jest zarządzany za pomocą `CartContext`, który przechowuje stan globalny aplikacji dotyczący dodanych do koszyka produktów.
+Koszyk jest zarządzany za pomocą `CartContext`, który przechowuje obecny stan koszyka użytkownika.
 
 **Funkcje Koszyka:**
 - Dodawanie produktów.
@@ -136,7 +136,7 @@ const CartProvider: React.FC = ({ children }) => {
 
 ### Logowanie i Rejestracja
 
-Formularze logowania i rejestracji są zaimplementowane z walidacją oraz obsługą API (backend).
+Formularze logowania i rejestracji są zaimplementowane z walidacją przez token jwt.
 
 Kod (fragment `login.tsx`):
 ```tsx
@@ -160,30 +160,28 @@ const handleSubmit = async (e: React.FormEvent) => {
 ## Stylizacja
 
 Stylizacja projektu jest inspirowana wyglądem Amazona. Użyto kolorystyki:
-- **Tło**: Białe (#FFFFFF).
-- **Przyciski**: Pomarańczowe (#febd69).
-- **Nagłówki**: Ciemnoszare (#232f3e).
 
 Przykładowy fragment CSS:
 ```css
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f3f3f3;
-}
-
-button {
-  background-color: #febd69;
-  border: none;
-  padding: 10px;
-}
+    font-family: Arial, sans-serif;
+    background-color: var(--amazon-gray);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 70px;
+  }
 ```
 
 ---
 
 ## Dalszy Rozwój
 
-1. **Obsługa Płatności:** Integracja z bramką płatniczą (np. Stripe).
+1. **Uprawnienia Administratora:** Dodatkowe możliwości interakcji ze stroną.
 2. **Recenzje Produktów:** Umożliwienie użytkownikom dodawania opinii.
 3. **Historia Zamówień:** Strona z historią zakupów.
-4. **PWA:** Przekształcenie aplikacji w progresywną aplikację webową.
+4. **Dokumentacja PostMan:** Opisanie możliwych zapytań z pomocą postmana.
 
